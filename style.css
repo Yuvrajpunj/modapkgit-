@@ -1,0 +1,520 @@
+
+/* Website ki basic settings */
+* {
+    box-sizing: border-box; /* Element ka size manage karta hai */
+}
+
+html {
+    scroll-behavior: smooth; /* Page ko smoothly scroll karta hai */
+}
+
+/* Puri website ka main design */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Text ka font set karta hai */
+    color: #252943; /* Text ka colour */
+    background-color: #fbfbff; /* Website ka background colour */
+}
+
+/* Website ka header section */
+.topbar {
+    height: 76px; /* Header ki height */
+    padding: 0 8%; /* Left aur right side space */
+    display: flex; /* Logo aur menu ko ek line mein rakhta hai */
+    align-items: center; /* Items ko center mein rakhta hai */
+    justify-content: space-between; /* Logo aur menu ke beech space deta hai */
+    background-color: white;
+    border-bottom: 1px solid #e9e9f2; /* Header ke niche line */
+}
+
+/* Website ka logo */
+.logo {
+    color: #252943;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none; /* Logo se underline hatata hai */
+}
+
+/* Logo ke second part ka colour */
+.logo span {
+    color: #6957d9;
+}
+
+/* Logo ke niche chhota text */
+.logo small {
+    display: block;
+    font-size: 8px;
+    margin-top: 3px;
+    color: #777d91;
+}
+
+/* Navigation menu ki setting */
+nav {
+    display: flex; /* Menu links ko ek line mein rakhta hai */
+    gap: 28px; /* Links ke beech space */
+}
+
+/* Navigation ke links */
+nav a {
+    color: #62677c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Mouse le jane par link ka colour change hota hai */
+nav a:hover {
+    color: #6957d9;
+}
+
+/* Main content ki width */
+main {
+    max-width: 1080px;
+    width: 84%;
+    margin: auto; /* Content ko center mein rakhta hai */
+}
+
+/* Homepage ka main banner */
+.hero {
+    min-height: 390px;
+    margin-top: 32px;
+    padding: 54px 6%;
+    border-radius: 22px; /* Banner ke corners round karta hai */
+
+    /* Banner mein light purple aur green colour ka combination */
+    background: linear-gradient(115deg, #f0edff, #f7f3ff, #e9f8f4);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Banner ke andar heading aur text */
+.hero-copy {
+    max-width: 570px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Main heading ke upar chhota text */
+.eyebrow {
+    color: #6957d9;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+/* Homepage ki main heading */
+h1 {
+    font-size: clamp(42px, 6vw, 65px);
+    line-height: 1.04;
+    margin: 0;
+}
+
+/* Heading ke highlighted text ka colour */
+h1 span {
+    color: #6957d9;
+}
+
+/* Heading ke niche description */
+.intro {
+    color: #777d91;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 17px 0 23px;
+}
+
+/* Search bar ka layout */
+.search-wrap {
+    display: flex; /* Search box aur button ko ek line mein rakhta hai */
+    gap: 8px;
+    max-width: 470px;
+}
+
+/* Search box ki design */
+.search-wrap input {
+    flex: 1; /* Search box ko available space deta hai */
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #e2dff2;
+    border-radius: 9px;
+    background: white;
+    font-size: 13px;
+    outline: none;
+}
+
+/* Search box par click karne se border colour change */
+.search-wrap input:focus {
+    border-color: #6957d9;
+}
+
+/* Sabhi buttons ki basic setting */
+button {
+    font-family: Arial, sans-serif;
+    cursor: pointer; /* Button par hand cursor dikhata hai */
+}
+
+/* Search aur download button ki common design */
+.search-wrap button,
+.download-btn {
+    background-color: #6957d9;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+/* Search button ke andar space */
+.search-wrap button {
+    padding: 0 20px;
+}
+
+/* Button par mouse le jane se colour change */
+.search-wrap button:hover,
+.download-btn:hover {
+    background-color: #5140c4;
+}
+
+/* Gaming illustration wala section */
+.hero-art {
+    width: 245px;
+    height: 245px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 3%;
+}
+
+/* Circle banane ke liye common setting */
+.orb {
+    position: absolute;
+    border-radius: 50%; /* Shape ko gol banata hai */
+}
+
+/* Bada purple circle */
+.orb-one {
+    width: 205px;
+    height: 205px;
+    right: 10px;
+    top: 20px;
+    background-color: #d8d0ff;
+}
+
+/* Chhota green circle */
+.orb-two {
+    width: 95px;
+    height: 95px;
+    left: 0;
+    bottom: 0;
+    background-color: #c7f0e2;
+}
+
+/* Gaming icon ke peeche wala box */
+.game-tile {
+    position: absolute;
+    width: 126px;
+    height: 145px;
+    left: 58px;
+    top: 49px;
+    border-radius: 24px;
+    background-color: white;
+
+    /* Box ke peeche halka shadow */
+    box-shadow: 0 15px 35px #5140c426;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    color: #6957d9;
+    font-size: 56px;
+
+    /* Box ko thoda tilt karta hai */
+    transform: rotate(7deg);
+}
+
+/* Gaming box ke andar PLAY text */
+.game-tile span {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Gaming section ka chhota label */
+.float-tag {
+    position: absolute;
+    right: -12px;
+    bottom: 27px;
+    padding: 10px 14px;
+    border-radius: 30px;
+    background-color: white;
+    color: #5140c4;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+/* Apps wale section ki spacing */
+.apps-section {
+    padding: 64px 0 70px;
+}
+
+/* Section heading aur app count ki setting */
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+/* Section ke headings */
+h2 {
+    font-size: 29px;
+    margin: 0;
+}
+
+/* Total apps ki counting */
+.result-count {
+    color: #777d91;
+    font-size: 13px;
+}
+
+/* Category buttons ka section */
+.filters {
+    display: flex;
+    flex-wrap: wrap; /* Jagah kam hone par buttons next line mein aate hain */
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+/* Har category button ki design */
+.filter {
+    background-color: white;
+    color: #62677c;
+    border: 1px solid #e9e9f2;
+    border-radius: 22px;
+    padding: 9px 16px;
+    font-size: 12px;
+}
+
+/* Selected category ka colour aur hover effect */
+.filter:hover,
+.filter.active {
+    background-color: #6957d9;
+    color: white;
+    border-color: #6957d9;
+}
+
+/* Apps ko grid mein dikhata hai */
+.app-grid {
+    display: grid;
+
+    /* Ek row mein 3 app cards dikhata hai */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+/* Har app ka card design */
+.app-card {
+    min-height: 178px;
+    border: 1px solid #e9e9f2;
+    border-radius: 15px;
+    padding: 19px;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: 13px;
+    align-items: center;
+
+    /* Hover effect ko smooth banata hai */
+    transition: 0.2s;
+}
+
+/* Card par mouse le jane ka effect */
+.app-card:hover {
+    border-color: #d2ccff;
+    transform: translateY(-3px); /* Card thoda upar uthta hai */
+}
+
+/* Sabhi app icons ki common setting */
+.app-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center; /* Icon ko center mein rakhta hai */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Alag-alag apps ke icons ke colours */
+.instagram {
+    background-color: #f6e5f1;
+    color: #b34788;
+}
+
+.spotify {
+    background-color: #e0f5e7;
+    color: #168348;
+}
+
+.youtube {
+    background-color: #ffe8e8;
+    color: #d73535;
+}
+
+.minecraft {
+    background-color: #eae8dc;
+    color: #66604d;
+}
+
+.snapchat {
+    background-color: #fff5c8;
+}
+
+.telegram {
+    background-color: #e3f2fc;
+    color: #278ac4;
+}
+
+/* App ke naam aur details wala section */
+.app-info {
+    min-width: 0;
+}
+
+/* App ki category ka text */
+.category {
+    color: #9699a8;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+/* App ka naam */
+.app-info h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* App ke baare mein chhoti information */
+.app-info p {
+    margin: 0;
+    color: #777d91;
+    font-size: 11px;
+}
+
+/* App card ka download button */
+.download-btn {
+    grid-column: 1 / -1; /* Button ko card ki poori row deta hai */
+    justify-self: start;
+    margin-top: 17px;
+    min-height: 34px;
+    padding: 0 15px;
+    font-size: 11px;
+}
+
+/* Website ka About section */
+.about {
+    border-top: 1px solid #e9e9f2;
+    padding: 34px 0 48px;
+}
+
+/* About ki heading */
+.about h2 {
+    font-size: 22px;
+}
+
+/* About ki description */
+.about p {
+    color: #777d91;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+/* Website ka last section yani Footer */
+footer {
+    background-color: #f2f0ff;
+    padding: 23px 8%;
+    text-align: center;
+    color: #777d91;
+    font-size: 12px;
+}
+
+/* Jab search mein koi app nahi milta */
+.empty-message {
+    color: #777d91;
+    padding: 25px 0;
+}
+
+/* Tablet screen ke liye design */
+@media (max-width: 760px) {
+
+    /* Tablet par main content ki width */
+    main {
+        width: 88%;
+    }
+
+    /* Header ki spacing adjust karta hai */
+    .topbar {
+        padding: 0 6%;
+    }
+
+    /* Tablet par ek row mein 2 apps */
+    .app-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Banner ki padding adjust karta hai */
+    .hero {
+        padding: 42px 6%;
+    }
+
+    /* Gaming illustration ko chhota karta hai */
+    .hero-art {
+        transform: scale(0.8);
+        transform-origin: center right;
+        margin-left: -35px;
+    }
+}
+
+/* Mobile screen ke liye design */
+@media (max-width: 560px) {
+
+    /* Mobile par navigation links ka gap */
+    nav {
+        gap: 13px;
+    }
+
+    /* Navigation text ko chhota karta hai */
+    nav a {
+        font-size: 12px;
+    }
+
+    /* Mobile par banner ki setting */
+    .hero {
+        min-height: 0;
+        padding: 42px 7%;
+    }
+
+    /* Mobile par gaming illustration hide karta hai */
+    .hero-art {
+        display: none;
+    }
+
+    /* Mobile par ek row mein ek app card */
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile par heading ka size */
+    h1 {
+        font-size: 42px;
+    }
+
+    /* Mobile par search button ki padding */
+    .search-wrap button {
+        padding: 0 14px;
+    }
+}
